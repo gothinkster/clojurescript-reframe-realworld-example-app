@@ -1,7 +1,7 @@
 (defproject conduit "0.1.0-SNAPSHOT"
             :dependencies [[org.clojure/clojure "1.9.0"]
                            [org.clojure/clojurescript "1.9.946"]
-                           [reagent "0.7.0"]
+                           [reagent "0.8.0-alpha2"]
                            [re-frame "0.10.2"]
                            [cljs-ajax "0.7.3"]
                            [day8.re-frame/http-fx "0.1.4"]
@@ -48,4 +48,10 @@
 
             :cljsbuild {:builds {:client {:source-paths ["src/conduit"]
                                           :compiler     {:output-dir "resources/public/js"
-                                                         :output-to  "resources/public/js/client.js"}}}})
+                                                         :output-to  "resources/public/js/client.js"
+                                                         :closure-warnings {:global-this :off}
+                                                         :process-shim true
+                                                         :install-deps true
+                                                         :npm-deps {"react" "15.6.2"
+                                                                    "react-dom" "15.6.2"
+                                                                    "create-react-class" "15.6.2"}}}}})
