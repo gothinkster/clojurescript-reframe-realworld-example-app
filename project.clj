@@ -27,7 +27,7 @@
                                                             :optimizations        :none
                                                             :source-map           true
                                                             :source-map-timestamp true
-                                                            :preloads             [re-frisk.preload]
+                                                            :preloads             [re-frisk.preload devtools.preload]
                                                             :main                 "conduit.core"}
                                                  :figwheel {:on-jsload            "conduit.core/main"}}}}}
 

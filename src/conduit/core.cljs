@@ -7,13 +7,12 @@
             [conduit.events] ;; These three are only
             [conduit.subs]   ;; required to make the compiler 
             [conduit.views]  ;; load them
-            [devtools.core :as devtools])
+            )
   (:import [goog History]
            [goog.history EventType]))
 
 ;; -- Debugging aids ----------------------------------------------------------
 ;;
-(devtools/install!)       ;; we love https://github.com/binaryage/cljs-devtools
 (enable-console-print!)   ;; so that println writes to `console.log`
 
 ;; -- Service Worker ----------------------------------------------------------
