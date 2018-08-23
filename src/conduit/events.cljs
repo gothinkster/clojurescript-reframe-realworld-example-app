@@ -57,7 +57,7 @@
 
 (reg-fx                                ;; register a new event handler to use with our -fx events
  :set-hash                             ;; this will be provided in a map for -fx events and
- (fn [{:keys [hash]}]                  ;; accept :hash as paramter, something like this: {:hash path}
+ (fn [{:keys [hash]}]                  ;; accept :hash as parameter, something like this: {:hash path}
    (set! (.-hash js/location) hash)))  ;; so that we can set window.location.hash to path
 
 ;; -- Event Handlers ----------------------------------------------------------
